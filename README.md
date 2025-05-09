@@ -3,6 +3,8 @@
 **5th Semester | Aug 2024 – Nov 2024**  
 As part of a precision agriculture initiative, this project focuses on the development of an autonomous navigation system for a John Deere tractor. The system enables the vehicle to follow predefined waypoints with high accuracy, enhancing efficiency in agricultural tasks.
 
+![Screenshot 2025-05-07 185847](https://github.com/user-attachments/assets/0a6cf12b-f234-431f-a9d7-6d464ab332bf)
+
 ## 📌 Project Overview
 
 This repository contains the firmware, control algorithms, and communication protocols used to control and navigate a differential tractor platform in real-time using embedded systems and sensors.
@@ -25,7 +27,7 @@ This repository contains the firmware, control algorithms, and communication pro
 
 ## 🛠️ Technologies
 
-- STM32 (ARM Cortex-M)
+- STM32H755 (ARM Cortex-M)
 - Arduino
 - C/C++
 - GPS, IMU, Encoders
@@ -34,6 +36,4 @@ This repository contains the firmware, control algorithms, and communication pro
 ## 🤝 Collaborators
 
 This project was developed in collaboration with a student team as part of the 5th semester robotics curriculum.
-
-![Screenshot 2025-05-07 185847](https://github.com/user-attachments/assets/0a6cf12b-f234-431f-a9d7-6d464ab332bf)
 

@@ -1,0 +1,2 @@
+../Core/Src/myprintf.c:17:1:__io_putchar	16	static
+../Core/Src/myprintf.c:23:6:printfRTC	40	static

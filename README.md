@@ -1,45 +1,66 @@
-# 🚜 Autonomous Tractor Navigation – John Deere Project
+# 🚁 Cooperative UAV Fire Detection System  
+**7th Semester | Autonomous Systems & Artificial Intelligence**
 
-**5th Semester | Aug 2024 – Nov 2024**  
-As part of a precision agriculture initiative, this project focuses on the development of an autonomous navigation system for a John Deere tractor. The system enables the vehicle to follow predefined waypoints with high accuracy, enhancing efficiency in agricultural tasks.
-
-![Screenshot 2025-05-07 185847](https://github.com/user-attachments/assets/0a6cf12b-f234-431f-a9d7-6d464ab332bf)
-
-## 📌 Project Overview
-
-This repository contains the firmware, control algorithms, and communication protocols used to control and navigate a differential tractor platform in real-time using embedded systems and sensors.
-
-## ✨ Key Features
-
-- 📍 **Trajectory Tracking System**  
-  Designed and implemented to follow precise paths and optimize field coverage.
-
-- 📡 **Sensor Fusion for Localization**  
-  Integrated GPS, IMUs, and wheel encoders to estimate the tractor’s real-time position and orientation.
-
-- 🎯 **Dynamic Control Algorithms**  
-  Developed algorithms for continuous adjustment of direction and speed, ensuring smooth and accurate path tracking.
-
-- 🔗 **Robust Communication Protocols**  
-  Enabled communication between STM32 and Arduino microcontrollers using SPI, I2C, CAN, and UART for real-time sensor data exchange.
+This repository features a **cooperative multi-UAV system** designed for **autonomous fire detection, mapping, and precision inspection**. By leveraging **computer vision** and **coordinated navigation**, the system automates the workflow of identifying fire hazards across large areas with style and efficiency.
 
 ---
 
-## 🛠️ Technologies
+## 📌 Project Overview
 
-- STM32H755 (ARM Cortex-M)
-- Arduino
-- C/C++
-- GPS, IMU, Encoders
-- SPI, I2C, UART, CAN
+The system uses a **dual-drone architecture**, where UAVs operate sequentially to bridge the gap between **wide-area surveillance** and **close-range inspection**:
 
-## 🤝 Collaborators
+- **Drone 1 | The Scout**  
+  Executes a structured grid-search pattern using a custom **YOLO model** to detect fire and log precise coordinates.
 
-This project was developed in collaboration with a student team as part of the 5th semester robotics curriculum.
+- **Drone 2 | The Inspector**  
+  Receives the logged data and performs **targeted navigation**, **visual servoing**, and **high-altitude inspection** of identified hotspots.
 
-## 🎥 Final Demonstration
+---
 
-The following video showcases the autonomous navigation system in action, including waypoint tracking, localization, and real-time control performance.
+## ✨ Key Features
 
-[![Autonomous Tractor Navigation Demo](https://img.youtube.com/vi/gyXZrDKsMcc/0.jpg)](https://www.youtube.com/watch?v=gyXZrDKsMcc)
+- 🔥 **Real-Time Fire Detection**  
+  Integrated **Ultralytics YOLO** model optimized for fire signature recognition with real-time bounding box visualization.
 
+- 🗺️ **Autonomous Grid Mapping**  
+  Drone 1 performs systematic exploration using logical cell coordinates and multi-frame validation to reduce false positives.
+
+- 📍 **Coordinate Logging System**  
+  Automated data pipeline that stores validated fire locations in a shared registry for seamless mission handoff.
+
+- 🧭 **Precision Geometric Navigation**  
+  Drone 2 uses yaw alignment and Euclidean distance calculations for efficient path planning.
+
+- 🎯 **Visual Servoing**  
+  Advanced alignment logic using YOLO detections to dynamically center the UAV over the fire source.
+
+- 🛬 **Automated Inspection Maneuvers**  
+  Pre-programmed flight sequences for safe descent, stable hovering at inspection height, and ascent.
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Tools |
+|--------|------|
+| **Languages** | Python |
+| **AI / Computer Vision** | Ultralytics YOLO, OpenCV, NumPy |
+| **Hardware / SDK** | DJI RoboMaster SDK (Tello Talent) |
+| **Navigation** | Geometric Path Planning, Visual Servoing |
+
+---
+
+## ▶️ Getting Started
+
+### 1. Environment Setup
+
+This project uses **Conda** for environment management to ensure dependency stability.
+
+```bash
+# Create the environment from the YAML file
+conda env create -f tello_drone.yaml
+
+
+
+# Activate the environment
+conda activate tello_drone

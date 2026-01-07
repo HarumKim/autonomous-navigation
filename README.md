@@ -41,5 +41,5 @@ This project was developed in collaboration with a student team as part of the 5
 
 The following video showcases the autonomous navigation system in action, including waypoint tracking, localization, and real-time control performance.
 
-[![Autonomous Tractor Navigation Demo]([https://img.youtube.com/vi/gyXZrDKsMcc/0.jpg)](https://www.youtube.com/watch?v=gyXZrDKsMcc))
+[![Autonomous Tractor Navigation Demo](https://img.youtube.com/vi/gyXZrDKsMcc/0.jpg)](https://www.youtube.com/watch?v=gyXZrDKsMcc)
 

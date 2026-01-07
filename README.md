@@ -37,3 +37,9 @@ This repository contains the firmware, control algorithms, and communication pro
 
 This project was developed in collaboration with a student team as part of the 5th semester robotics curriculum.
 
+## 🎥 Final Demonstration
+
+The following video showcases the autonomous navigation system in action, including waypoint tracking, localization, and real-time control performance.
+
+[![Autonomous Tractor Navigation Demo]([https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID](https://youtu.be/gyXZrDKsMcc))
+
